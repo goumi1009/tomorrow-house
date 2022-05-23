@@ -38,4 +38,46 @@
       height: 20px;
     }
   }
+
+  @include responsive(T) {
+    &-wrapper {
+      height: 80px;
+    }
+
+    &-left {
+      @include flexbox(start);
+      gap: 32px;
+    }
+
+    &-right {
+      @include flexbox(end);
+      gap: 24px;
+
+      .button-group {
+        gap: 8px;
+      }
+    }
+
+    .logo {
+      position: static;
+      transform: none;
+
+      img {
+        height: 24px;
+      }
+    }
+
+    .btn-primary {
+      gap: 4px;
+      width: 88px;
+    }
+  }
+
+  @include responsive(D) {
+    &-right {
+      .input-group {
+        width: 264px;
+      }
+    }
+  }
 }
