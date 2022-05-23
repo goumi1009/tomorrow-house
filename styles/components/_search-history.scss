@@ -23,6 +23,12 @@
 
   &-item {
     @include flexbox(start, start);
+    border-radius: 2px;
+    transition: background-color 200ms ease-in-out;
+
+    &:hover {
+      background-color: $background;
+    }
 
     .word-button {
       @include text-style(16, $primary);
@@ -40,6 +46,11 @@
       margin-top: 6px;
       font-size: 16px;
       color: $tertiary;
+      transition: color 200ms ease-in-out;
+
+      &:hover {
+        color: $primary;
+      }
     }
   }
 }
