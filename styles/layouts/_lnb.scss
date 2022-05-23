@@ -3,11 +3,8 @@
   $grid-margin: $sm-margin + $gutter / 2;
   $lnb-height: 40px;
 
+  @include no-scrollbar;
   overflow-x: auto;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 
   &-list {
     @include inline-flexbox(start);
