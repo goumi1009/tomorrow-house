@@ -4,6 +4,7 @@
   &-list {
     @include flexbox(start);
     gap: 24px - ($padding * 2);
+    margin-left: -#{$padding};
   }
 
   &-item {
