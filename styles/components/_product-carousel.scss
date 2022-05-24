@@ -87,4 +87,32 @@
       }
     }
   }
+
+  @include responsive(D) {
+    @include flexbox;
+    flex-direction: row-reverse;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    &-slider {
+      width: 500px;
+      height: 500px;
+    }
+
+    .thumbnail-list {
+      flex-direction: column;
+    }
+
+    .thumbnail-item {
+      button {
+        width: 75px;
+        height: 75px;
+      }
+
+      img {
+        width: 75px;
+      }
+    }
+  }
 }
