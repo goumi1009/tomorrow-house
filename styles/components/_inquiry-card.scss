@@ -34,10 +34,24 @@
 
   &-body {
     @include text-style(13);
-    position: relative;
 
-    .question-content {
+    .inquiry-content {
+      position: relative;
       padding-left: 20px;
+
+      &:first-child:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+
+    .seller {
+      @include flexbox(start);
+      gap: 4px;
+      margin-bottom: 4px;
+
+      time {
+        color: $tertiary;
+      }
     }
 
     span {
@@ -68,8 +82,20 @@
     &-body {
       @include text-style(14);
 
-      .question-content {
+      .inquiry-content {
         padding-left: 24px;
+
+        &:first-child:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+
+      .seller {
+        margin-bottom: 8px;
+
+        strong {
+          @include text-style(16);
+        }
       }
 
       span {
