@@ -1,0 +1,18 @@
+$gutter: 20px;
+
+// mobile
+$sm-columns: 4;
+$sm-margin: 5px;
+
+// tablet
+$md-columns: 12;
+$md-margin: 30px;
+$md-max-container: 960px + $md-margin * 2;
+
+// pc
+$lg-columns: 12;
+$lg-unit: 75px;
+$lg-max-container: ($lg-unit + $gutter) * $lg-columns;
+
+// sm-margin + guttur / 2
+$grid-margin: 15px;
