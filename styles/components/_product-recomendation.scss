@@ -7,6 +7,20 @@
 
   .product-item {
     width: calc(50% - 10px);
+
+    a {
+      display: block;
+
+      &:active {
+        img {
+          transform: scale(1.1);
+        }
+
+        .product-card-title {
+          opacity: 0.7;
+        }
+      }
+    }
   }
 
   @include responsive(T) {
@@ -15,10 +29,22 @@
     }
 
     .product-item {
-      width: calc(33.333% - 12px);
+      width: calc(33.333% - 11px);
 
       &:last-child {
         display: none;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    .product-item a:hover {
+      img {
+        transform: scale(1.1);
+      }
+
+      .product-card-title {
+        opacity: 0.7;
       }
     }
   }
