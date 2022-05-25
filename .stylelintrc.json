@@ -180,7 +180,7 @@
     "unit-no-unknown": true,
     "value-list-comma-space-before": "never",
     "function-no-unknown": null,
-
+    "value-no-vendor-prefix": [true, { "ignoreValues": ["box"] }],
     "scss/at-function-parentheses-space-before": "never",
     "scss/at-mixin-pattern": "^.[a-z]+(-[a-z0-9])*",
     "scss/at-rule-no-unknown": true,
