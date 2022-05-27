@@ -36,14 +36,34 @@
       @include text-style(16, $white);
     }
 
+    .avatar-32:active {
+      opacity: 0.4;
+    }
+
     .username {
       @include truncate;
       flex-grow: 1;
       font-weight: 700;
+
+      &:active {
+        color: $blue;
+      }
     }
 
     .order {
       margin-left: auto;
+    }
+  }
+
+  @include responsive(D) {
+    &-detail {
+      .avatar-32:hover {
+        opacity: 0.4;
+      }
+
+      .username:hover {
+        color: $blue;
+      }
     }
   }
 }
