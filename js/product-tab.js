@@ -36,3 +36,32 @@ productTabButtonList.forEach((button) => {
   button.addEventListener('click', toggleActiveTab);
   button.addEventListener('click', scrollToTabPanel);
 });
+
+// 사전정보 : 각 tabpanel의 y축 위치
+// 요소의 y축 위치 = window.scrollY + element.getBoundingClientRect().top
+const productTabPanelIdList = [
+  'product-spec',
+  'product-review',
+  'product-inquiry',
+  'product-shipment',
+  'product-recomendation',
+];
+const productTabPanelList = productTabPanelIdList.map((panelId) => {
+  const tabPanel = document.querySelector(`#${panelId}`);
+  return tabPanel;
+});
+const productTabPanelPositionMap = {};
+
+const detectTabPanelPosition = () => {
+  productTabPanelList.forEach((panel) => {
+    const id = panel.getAttribute('id');
+    const position = window.scrollY + panel.getBoundingClientRect().top;
+
+    productTabPanelPositionMap[id] = position;
+  });
+
+  console.log(productTabPanelPositionMap);
+};
+
+window.addEventListener('load', detectTabPanelPosition);
+window.addEventListener('resize', detectTabPanelPosition);
